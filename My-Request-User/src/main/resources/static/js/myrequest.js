@@ -97,7 +97,7 @@ divObj1.innerText=dateFormat;
 
 			var divObj4 = document.createElement('td');
 			divObj4.className = "spacing";
-			divObj4.id = "tdaction" + i;
+			//divObj4.id = "tdaction" + i;
 		
 			
 			var divObj5 = document.createElement('td');
@@ -119,11 +119,11 @@ divObj1.innerText=dateFormat;
 	   	   // divObj1.innerText = arr.dateOfTravel;
 			//divObj2.innerText = arr.details[i].timeSlot;
 			divObj3.innerText = arr[i].details.status;
-			if(status=="reached")
+			if(divObj3.innerText=="reached")
 			{
 				divObj4.innerHTML = "<a class='view-icon' href='cab-app-completedtrip.html'><img src='images/view.png' class='viewicon' alt='viewicon'</a>";
 		
-			}
+		}
 			else{
 			divObj4.innerHTML = "<a class='view-icon'><img src='images/view.png' class='viewicon' alt='viewicon'</a>";
 	
@@ -148,7 +148,7 @@ divObj1.innerText=dateFormat;
 
 
 			document.getElementById("tableBody").appendChild(trow);
-          //document.getElementById("tdaction0").disabled = "true"; 
+          //document.getElementById("tdaction").disabled = "true"; 
         
 		}
 		
