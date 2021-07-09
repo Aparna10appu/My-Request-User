@@ -23,6 +23,9 @@ var time;
 var hours
 var dateFormat;
 var dateTravel;
+var tripCabId;
+var bookingId;
+
 function processResponse() {
 	if (xhrMyRequest.readyState == 4 && xhrMyRequest.status == 200) {
 		// $("#tableBody").empty();
@@ -119,22 +122,26 @@ divObj1.innerText=dateFormat;
 	   	   // divObj1.innerText = arr.dateOfTravel;
 			//divObj2.innerText = arr.details[i].timeSlot;
 			divObj3.innerText = arr[i].details.status;
-			if(divObj3.innerText=="reached")
+			if(divObj3.innerText=="cancelled")
 			{
-				divObj4.innerHTML = "<a class='view-icon' href='cab-app-completedtrip.html'><img src='images/view.png' class='viewicon' alt='viewicon'</a>";
-		
+				divObj4.innerHTML = "<a class='view-icon'><img src='images/view.png' class='viewicon' alt='viewicon'</a>";
+	
 		}
 			else{
-			divObj4.innerHTML = "<a class='view-icon'><img src='images/view.png' class='viewicon' alt='viewicon'</a>";
-	
-			}
+			//divObj4.innerHTML = "<a class='view-icon'><img src='images/view.png' class='viewicon' alt='viewicon'</a>";
+	           divObj4.innerHTML = "<a class='view-icon'><img src='images/view.png' class='viewicon' alt='viewicon' onclick='navigate()'</a>";
+		       
+		       }
 	
 					
 			
 		//document.getElementById("tdaction0").disabled = "true"; 
             
-			divObj5.innerHTML = arr[i].details.tripCabId;
-			divObj6.innerHTML =arr[i].details.bookingId;
+            tripCabId=arr[i].details.tripCabId;
+            bookingId=arr[i].details.bookingId;
+            
+			divObj5.innerHTML = tripCabId;
+			divObj6.innerHTML =bookingId;
 
 
 			trow.appendChild(divObj);
@@ -156,7 +163,15 @@ divObj1.innerText=dateFormat;
 count.class = "header-left py-md-3";
 document.getElementById("totalrecord").innerText ='Total record  '+ rowCounter+" out of " +rowCounter;
 
+   
+
+
 	}
+	
+	   function navigate(){
+		window.location.href = "cab-app-completedtrip.html?TripId =" + tripCabId + "?bookId =" + bookingId;
+	}
+	
 }
 
 

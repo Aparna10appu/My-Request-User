@@ -10,7 +10,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.example.demo.BO.BookingDetailsBO;
 import com.example.demo.BO.RequestBO;
 import com.example.demo.entity.BookingRequestBO;
 import com.example.demo.entity.TripCabInfo;
