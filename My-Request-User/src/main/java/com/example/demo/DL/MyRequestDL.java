@@ -26,7 +26,7 @@ public class MyRequestDL {
 	private TripCabRepository triprepo;
 
   
-	public  List<RequestBO>  getHistoryOfTrips(int employeeId) {
+	public  List<RequestBO>  getHistoryOfTrips(String employeeId) {
         List<RequestBO> resultobj= new ArrayList<RequestBO>();
 		List<BookingRequestBO> details =this.bookingrepo.getCompletedTripDetails(employeeId);
 		 for(BookingRequestBO eachRequest:details) {

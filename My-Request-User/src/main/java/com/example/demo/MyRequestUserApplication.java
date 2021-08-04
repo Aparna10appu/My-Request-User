@@ -40,10 +40,10 @@ public class MyRequestUserApplication {
 			@Override
 			public void run(String... args) throws Exception {
 			
-				BookingRequestBO details = new BookingRequestBO(1,2038,"Nive","Alphacity","Tambaram","Bharath university",LocalDateTime.now(),LocalTime.of(10, 30),0,1031,null,null,null,null,"reached",null,null,null,null,0);
+				BookingRequestBO details = new BookingRequestBO(1,"2038","Nive","Alphacity","Tambaram","Bharath university",LocalDateTime.now(),LocalTime.of(10, 30),0,1031,null,null,null,null,"reached",null,null,null,null,0);
 				this.bookingrepo.save(details);
 				
-				BookingRequestBO details1 = new BookingRequestBO(2,2038,"Nive","Alphacity","ChennaiEgmore","Bharath university",LocalDateTime.now(),LocalTime.of(10, 30),0,1038,null,null,null,null,"cancelled",null,null,null,null,0);
+				BookingRequestBO details1 = new BookingRequestBO(2,"2038","Nive","Alphacity","ChennaiEgmore","Bharath university",LocalDateTime.now(),LocalTime.of(10, 30),0,1038,null,null,null,null,"cancelled",null,null,null,null,0);
 				this.bookingrepo.save(details1);
 				
 				//BookingRequestBO details2 = new BookingRequestBO(3,2034,"Nive","Alphacity","Central","Bharath university",LocalDateTime.now(),LocalTime.of(10, 30),0,1050,null,null,null,null,"reached",null,null,null,null,0);

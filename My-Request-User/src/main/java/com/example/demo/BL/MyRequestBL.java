@@ -30,7 +30,7 @@ public class MyRequestBL {
 //		return this.myrequestDL.getTripCabInfo(tripCabId);
 //	}
 
-		public List<RequestBO> getHistoryTrips(int employeeId) {
+		public List<RequestBO> getHistoryTrips(String employeeId) {
 		return this.myrequestDL.getHistoryOfTrips(employeeId);
 	}
 	

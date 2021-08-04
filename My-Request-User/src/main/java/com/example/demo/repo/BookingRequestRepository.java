@@ -20,6 +20,6 @@ public interface BookingRequestRepository extends MongoRepository<BookingRequest
 	List<BookingRequestBO> findByTripCabId(long tripCabId);
 
 	@Query(value = "{employeeId : ?0 , status:{$nin : [Assigned,InProgress]}}")  
-	List<BookingRequestBO> getCompletedTripDetails(int employeeId);
+	List<BookingRequestBO> getCompletedTripDetails(String employeeId);
 
 }

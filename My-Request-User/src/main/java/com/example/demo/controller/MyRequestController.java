@@ -32,7 +32,7 @@ public class MyRequestController {
 		
 		//For getting the BookingRequest based on EmployeeId
 	    @GetMapping(path = "/employeedetails/{id}")
-	    public ResponseEntity<List<RequestBO>> getEmployeeDetails(@PathVariable("id")int employeeId)
+	    public ResponseEntity<List<RequestBO>> getEmployeeDetails(@PathVariable("id")String employeeId)
 	    {
 	        List<RequestBO> myRequest = this.myrequestBL.getHistoryTrips(employeeId);
 	        
